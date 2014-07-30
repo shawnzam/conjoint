@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  indulgence_rating: 1.5
+  good_for_me_rating: 1.5
+  calories_per_serving: 1
+  fat_per_serving: 1
+
+two:
+  indulgence_rating: 1.5
+  good_for_me_rating: 1.5
+  calories_per_serving: 1
+  fat_per_serving: 1
