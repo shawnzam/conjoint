@@ -1,0 +1,14 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :indulgence_rating %>
+    <%= f.input :good_for_me_rating %>
+    <%= f.input :calories_per_serving %>
+    <%= f.input :fat_per_serving %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
