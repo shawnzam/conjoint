@@ -1,14 +1,34 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :indulgence_rating %>
-    <%= f.input :good_for_me_rating %>
-    <%= f.input :calories_per_serving %>
-    <%= f.input :fat_per_serving %>
+<%= form_for @product, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :indulgence_rating, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :indulgence_rating, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :good_for_me_rating, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :good_for_me_rating, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :calories_per_serving, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :calories_per_serving, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fat_per_serving, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :fat_per_serving, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  products_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
