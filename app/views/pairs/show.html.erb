@@ -1,14 +1,22 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Pair -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Pair %></h1>
+</div>
 
-<p>
-  <strong>Task session:</strong>
-  <%= @pair.task_session %>
-</p>
+<div class="fieldset">
+  <dl>
+  </dl>
+</div>
 
-<p>
-  <strong>Result:</strong>
-  <%= @pair.result %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              pairs_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_pair_path(@pair), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              pair_path(@pair),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<%= link_to 'Edit', edit_pair_path(@pair) %> |
-<%= link_to 'Back', pairs_path %>
