@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @result.userid %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @result.rating %>
+</p>
+
+<p>
+  <strong>Task session:</strong>
+  <%= @result.task_session %>
+</p>
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>
