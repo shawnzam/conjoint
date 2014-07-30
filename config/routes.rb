@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pairs
+
   resources :products
 
   resources :results

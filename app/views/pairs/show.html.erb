@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task session:</strong>
+  <%= @pair.task_session %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @pair.result %>
+</p>
+
+<%= link_to 'Edit', edit_pair_path(@pair) %> |
+<%= link_to 'Back', pairs_path %>
